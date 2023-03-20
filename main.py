@@ -94,9 +94,10 @@ class MyWidget(QWidget):
     def generate(self):
         if functools.reduce(lambda prev, elem: prev and elem.pixmap() is not None, self.image_label, True):
             self.result_image_label.setPixmap(
-                QPixmap(self.image_file_path_line_edit[0].text()).scaled(self.result_image_label.size(),
-                                                                  Qt.AspectRatioMode.KeepAspectRatio,
-                                                                  Qt.TransformationMode.SmoothTransformation)
+                QPixmap(self.image_file_path_line_edit[0].text()).scaled(
+                    self.result_image_label.size(),
+                    Qt.AspectRatioMode.KeepAspectRatio,
+                    Qt.TransformationMode.SmoothTransformation)
             )
 
 
